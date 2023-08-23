@@ -53,3 +53,9 @@ optionsButton.forEach((button) => {
     });
 });
 
+advancedOptionButton.forEach((button) => {
+    button.addEventListener("change", () => {
+        modifyText(button.id, false, null);
+    });
+});
+

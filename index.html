@@ -9,7 +9,98 @@
 </head>
 <body>
 
-    
+    <div class="container">
+        <div class="options">
+            <!-- Bold -->
+            <button id="bold" class="option-button format">
+                <i class="fa-solid fa-bold"></i>
+            </button>
+            <!-- Superscript -->
+            <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript"></i>
+            </button>
+            <!-- Subscript -->
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i>
+            </button>
+            <!-- Ordered List -->
+            <button id="orderedList" class="option-button">
+                <i class="fa-solid fa-list-ol"></i>
+            </button>
+            <!-- Unordered List -->
+            <button id="unorderedList" class="option-button">
+                <i class="fa-solid fa-list"></i>
+            </button>
+            <!-- Undo -->
+            <button id="undo" class="option-button">
+                <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <!-- Redo -->
+            <button id="redo" class="option-button">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <!-- Create link -->
+            <button id="link" class="option-button">
+                <i class="fa-solid fa-link"></i>
+            </button>
+            <!-- Remove link -->
+            <button id="unlink" class="option-button">
+                <i class="fa-solid fa-link-slash"></i>
+            </button>
+            <!-- Left align -->
+            <button id="leftAlign" class="option-button align">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <!-- Center align -->
+            <button id="centerAlign" class="option-button align">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <!-- Right align -->
+            <button id="rightAlign" class="option-button align">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+            <!-- Justified align -->
+            <button id="justifiedAlign" class="option-button align">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+            <!-- Indent -->
+            <button id="indent" class="option-button spacing">
+                <i class="fa-solid fa-indent"></i>
+            </button>
+            <!-- Outdent -->
+            <button id="outdent" class="option-button spacing">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+
+            <!-- Size format selector -->
+            <select id="formatBlock" class="adv-option-button">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select>
+
+            <!-- Font name selector -->
+            <select id="fontName" class="adv-option-button"></select>
+
+            <!-- Font size selector -->
+            <select id="fontSize" class="adv-option-button"></select>
+
+            <!-- Font color selector -->
+            <div class="input-wrapper">
+                <input type="color" id="foreColor" class="adv-option-button">
+                <label for="foreColor">Font Color</label>
+            </div>
+
+            <!-- Highlight color selector -->
+            <div class="input-wrapper">
+                <input type="color" id="backColor" class="adv-option-button">
+                <label for="backColor">Highlight Color</label>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 

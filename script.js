@@ -47,3 +47,9 @@ const modifyText = (command, defaultUi, value) => {
     document.execCommand(command, defaultUi, value);
 };
 
+optionsButton.forEach((button) => {
+    button.addEventListener("click", () => {
+        modifyText(button.id, false, null);
+    });
+});
+

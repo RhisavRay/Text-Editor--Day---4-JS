@@ -46,3 +46,12 @@ button
     color: #020929;
     cursor: pointer;
 }
+
+select
+{
+    padding: 7px;
+    border: 1px solid #020929;
+    border-radius: 3px;
+    cursor: pointer;
+}
+

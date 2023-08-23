@@ -1,5 +1,5 @@
 let optionsButton = document.querySelectorAll(".option-button");
-let anvancedOptionButton = document.querySelectorAll(".adv-option-button");
+let advancedOptionButton = document.querySelectorAll(".adv-option-button");
 let fontName = document.getElementById("fontName");
 let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
@@ -55,7 +55,7 @@ optionsButton.forEach((button) => {
 
 advancedOptionButton.forEach((button) => {
     button.addEventListener("change", () => {
-        modifyText(button.id, false, null);
+        modifyText(button.id, false, button.value);
     });
 });
 

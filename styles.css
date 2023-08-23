@@ -59,3 +59,15 @@ label, select
 {
     font-family: 'Poppins', sans-serif;
 }
+
+input
+{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 28px;
+    border: none;
+    cursor: pointer;
+}

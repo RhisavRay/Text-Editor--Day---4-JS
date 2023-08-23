@@ -93,4 +93,4 @@ const highlighterRemover = (className) => {
     });
 };
 
-window.onload = intializer();s
+window.onload = intializer();

@@ -32,3 +32,17 @@ body
     align-items: center;
     gap: 15px;
 }
+
+button
+{
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 3px;
+    border: none;
+    background-color: #FFF;
+    outline: none;
+    color: #020929;
+    cursor: pointer;
+}

@@ -83,3 +83,11 @@ input::-moz-color-swatch
     border-radius: 15px;
     box-shadow: 0 0 0 2px #FFF, 0 0 0 3px #020929;
 }
+
+#text-input
+{
+    margin-top: 10px;
+    border: 1px solid #DDD;
+    padding: 20px;
+    height: 50vh;
+}

@@ -1,13 +1,13 @@
-let optionsButton = document.querySelectorAll(".option-button");
+let optionsButtons = document.querySelectorAll(".option-button");
 let advancedOptionButton = document.querySelectorAll(".adv-option-button");
 let fontName = document.getElementById("fontName");
 let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
-let linkButton = document.getElementById("link");
+let linkButton = document.getElementById("createLink");
 let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
 let formatButtons = document.querySelectorAll(".format");
-let scriptButton = document.querySelectorAll(".script");
+let scriptButtons = document.querySelectorAll(".script");
 
 let fontList = [
     "Arial",
@@ -16,24 +16,23 @@ let fontList = [
     "Garamond",
     "Georgia",
     "Courier New",
-    "Cursive"
+    "Cursive",
 ];
 
-const initializer = () => {
+const intializer = () => {
     highlighter(alignButtons, true);
     highlighter(spacingButtons, true);
     highlighter(formatButtons, false);
-    highlighter(scriptButton, true);
+    highlighter(scriptButtons, true);
 
-    fontList.map((font) => {
+    fontList.map((value) => {
         let option = document.createElement("option");
-        option.value = font;
-        option.innerHTML = font;
+        option.value = value;
+        option.innerHTML = value;
         fontName.appendChild(option);
     });
 
-    for(let i = 1; i <= 7; i++)
-    {
+    for (let i = 1; i <= 7; i++) {
         let option = document.createElement("option");
         option.value = i;
         option.innerHTML = i;
@@ -47,7 +46,7 @@ const modifyText = (command, defaultUi, value) => {
     document.execCommand(command, defaultUi, value);
 };
 
-optionsButton.forEach((button) => {
+optionsButtons.forEach((button) => {
     button.addEventListener("click", () => {
         modifyText(button.id, false, null);
     });
@@ -60,11 +59,10 @@ advancedOptionButton.forEach((button) => {
 });
 
 linkButton.addEventListener("click", () => {
-    let userLink = prompt("Enter a URL...");
-    if(/http/i.test(userLink))
+    let userLink = prompt("Enter a URL?");
+    if (/http/i.test(userLink)) {
         modifyText(linkButton.id, false, userLink);
-    else
-    {
+    } else {
         userLink = "http://" + userLink;
         modifyText(linkButton.id, false, userLink);
     }
@@ -73,17 +71,18 @@ linkButton.addEventListener("click", () => {
 const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
         button.addEventListener("click", () => {
-            if(needsRemoval)
-            {
+            if (needsRemoval) {
                 let alreadyActive = false;
-                if(button.classList.contains("active"))
+                if (button.classList.contains("active")) {
                     alreadyActive = true;
+                }
                 highlighterRemover(className);
-                if(!alreadyActive)
+                if (!alreadyActive) {
                     button.classList.add("active");
-            }
-            else
+                }
+            } else {
                 button.classList.toggle("active");
+            }
         });
     });
 };
@@ -94,4 +93,4 @@ const highlighterRemover = (className) => {
     });
 };
 
-window.onload = initializer();
+window.onload = intializer();s

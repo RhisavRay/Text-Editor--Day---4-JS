@@ -93,3 +93,5 @@ const highlighterRemover = (className) => {
         button.classList.remove("active");
     });
 };
+
+window.onload = initializer();

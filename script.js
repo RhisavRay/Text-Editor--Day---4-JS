@@ -19,3 +19,27 @@ let fontList = [
     "Cursive"
 ];
 
+const initializer = () => {
+    highlighter(alignButtons, true);
+    highlighter(spacingButtons, true);
+    highlighter(formatButtons, false);
+    highlighter(scriptButton, true);
+
+    fontList.map((font) => {
+        let option = document.createElement("option");
+        option.value = font;
+        option.innerHTML = font;
+        fontName.appendChild(option);
+    });
+
+    for(let i = 1; i <= 7; i++)
+    {
+        let option = document.createElement("option");
+        option.value = i;
+        option.innerHTML = i;
+        fontSizeRef.appendChild(option);
+    }
+
+    fontSizeRef.value = 3;
+};
+

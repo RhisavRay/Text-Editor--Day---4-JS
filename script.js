@@ -43,3 +43,7 @@ const initializer = () => {
     fontSizeRef.value = 3;
 };
 
+const modifyText = (command, defaultUi, value) => {
+    document.execCommand(command, defaultUi, value);
+};
+
